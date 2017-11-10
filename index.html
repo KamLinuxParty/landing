@@ -1,46 +1,149 @@
+{% load staticfiles %}
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8" />
 	<title>Кадки от производителя</title>
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link type="text/css" rel="stylesheet" href="style.css">
-	<script type="text/javascript" charset="UTF-8" src="/js/main.js"></script>
+	
+	<!-- Bootstrap -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+	<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+	<link type="text/css" rel="stylesheet/less" href="{% static 'css/style.less' %}">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+	
+	
+	<script type="text/javascript" charset="UTF-8" src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
-	<section id="head">
-		<div class="head">
-			<a href="#head" class="logo">
-				<img src="img/logo.png" />
-			</a>
-			<nav>
-				<ul class="nav">
-					 <li>
-						<a href="#sec_1">							
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</section>
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<section id="header" class="width100 header_wrapper sec-header">		
+	<header  class="container header">
+		
+		<a href="#header" class="logo">
+			<img src="{% static 'img/logo.png' %}" />
+		</a>
+		<nav class="navbar navbar-fixed-top">
+			<ul class="nav">
+				
+				<li>
+					<a href="#aCadki">
+					О Кадки			
+					</a>
+				</li>
+				
+				<li>
+					<a href="#feedback">
+					Отзывы клиентов			
+					</a>
+				</li>
+				
+				<li>
+					<a href="#coops">
+					coop			
+					</a>
+				</li>
+				
+				<li>
+					<a href="#traffic">
+					Большой захват траффика			
+					</a>
+				</li>
+				
+				<li>
+					<a href="#about">
+					О нас				
+					</a>
+				</li>
+				
+				<li>
+					<a href="#contacts">
+					Контакты			
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="phonenumber">
+			<div class="number">+7 (861) 204-09-76</div>
+			<a class="button call" ></a>
+		</div>		
+	</header>
+	</section>	
+		
 	
-	<section id="offer">		
+	<section id="offer" class="width100 bg-main">
+		<div class="container bg-black-traf">
+			<div class="slogon-con centered">
+				<div class="slogon section-header centered">
+					<h1>Кадки от производителей</h1>
+					<div class="sep-hor-big"></div>
+				</div>				
+				
+				<h2 class="slogon section-header-body centered"><i>доставка по всей россии</i></h2>
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+				<div class="form-h shadow-common centered">
+				<h3 class="form-title">АКЦИЯ</h3>
+				<p class="form-desc">Закажи катку получи пиздюль в подарок!</p>
+				<form action="send_mail()" class="contactform" method="post">
+					<div class="input">
+						<div class="title_name">Введите ваше имя</div>
+						<input type="text" placeholder="Артур" class="input_name" name="name">
+					</div>
+					<div class="input">
+						<div class="title_name">Введите ваш телефон</div>
+						<input type="text" placeholder="+79356556964" class="input_name" name="phonenumber">
+					</div>
+					<input type="submit" class="btn submit" name="submit">
+				</form>
+				</div>
+			</div>
+		</div>		
 	</section>	
-	<section id="aCadki">		
+	<section id="aCadki">
+	<div class="container">
+		<h2 class="section-header">О Кадки</h2>
+	</div>
 	</section>	
-	<section id="feedback">		
+	<section id="feedback">
+	<div class="container">
+				<h2 class="section-header">Отзывы клиентов	</h2>
+			</div>		
 	</section>	
-	<section id="coops">		
+	<section id="coops">
+	<div class="container">
+				<h2 class="section-header">coop</h2>
+			</div>		
 	</section>	
-	<section id="traffic">		
+	<section id="traffic">
+	<div class="container">
+				<h2 class="section-header">Большой захват траффика</h2>
+			</div>		
 	</section>	
-	<section id="about">		
+	<section id="about">
+	<div class="container">
+				<h2 class="section-header">О нас</h2>
+			</div>		
 	</section>	
-	<section id="contacts">		
+	<section id="contacts">
+	<div class="container">
+				<h2 class="section-header">Контакты</h2>
+			</div>		
 	</section>	
-	<section id="footer">
+	<footer>
 		<p class="CopyRight">Студия мамкиных прохрамистов #KLP</p>
-	</section>		
+	</footer>		
 		
 </body>
 </html>
